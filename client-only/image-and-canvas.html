@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style type="text/css">
+			#canvas {
+				margin: 0px;
+				border: solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<canvas id="canvas" width="600" height="400"> 
+			No canvas support 
+		</canvas>
+		<script type="text/javascript">
+		$(window).load(function() {
+			var img = new Image();
+			img.onload = function() {init(img);};
+			img.src = "imgs/kingdom.jpg"
+		});
+		function init(img) {
+			var canvas = document.getElementById("canvas");
+			var gc = canvas.getContext("2d");
+			gc.drawImage(img, 0, 0);
+		}
+		</script>
+	</body>
+</html>
