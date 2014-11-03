@@ -9,3 +9,5 @@
 ## Javascript for CV
 1. [js for object detect](https://github.com/mtschirs/js-objectdetect)
 2. [jsfeat](https://github.com/inspirit/jsfeat)
+3. [top 18 js libs for image manipulation](http://codegeekz.com/best-javascript-image-manipulation-libraries/)
+4. [jquery canvas](http://www.sitepoint.com/image-manipulation/)

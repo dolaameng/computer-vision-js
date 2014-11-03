@@ -1,0 +1,24 @@
+<!-- using html5 is simple - all you need to do is to use the simpler doctype declariation -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="js/modernizr.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		if (Modernizr.canvas) {
+			console.log("canvas supported");
+		}
+		if (Modernizr.canvastext) {
+			console.log("canvas text supported");
+		}
+		if (Modernizr.webworkers) {
+			console.log("web workers supported")
+		}
+		if (Modernizr.applicationcache) {
+			console.log("offline application supported")
+		}
+		</script>
+	</body>
+</html>
