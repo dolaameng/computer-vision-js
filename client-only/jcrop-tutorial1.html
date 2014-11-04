@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery.Jcrop.min.js"></script>
+		<link rel="css/jquery.Jcrop.css" />
+		<style type="text/css">
+			canvas {
+				border: solid red;
+			}
+			#canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <canvas width="1050" height="788" id="canvas"></canvas> -->
+		<canvas width="800" height="600" id="canvas"></canvas>
+		<canvas width="800" height="600" id="processed"></canvas>
+		
+		<script type="text/javascript">
+
+		function showCoords(c) {
+			console.log(c.x, c.y, c.x2, c.y2, c.w, c.h);
+		}
+
+
+		$(window).ready(function () {
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+			var img = new Image();
+			img.onload = function() {
+				context.drawImage(img, 0, 0);
+				context.fillStyle = "red";
+				context.fillRect(50, 50, 100, 100);
+			};
+			img.src = "imgs/kingdom.jpg"
+
+
+			jQuery(function($) {
+				$("#canvas").Jcrop({
+					bgOpacity: 0.6,
+					boxWidth: 800,
+					boxHeight: 600,
+					onSelect: showCoords,
+					onChange: showCoords,
+					onRelease: function() {console.log("released");}
+				});
+			});
+		});
+
+		
+		</script>
+	</body>
+</html>
