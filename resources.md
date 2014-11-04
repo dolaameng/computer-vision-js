@@ -6,6 +6,7 @@
 
 ## Computer Vision
 1. [train Haar cascade classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
+2. [good opencv blog](http://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_Image_Hough%20Circle_Transform.php)
 
 ## Javascript for CV
 1. [js for object detect](https://github.com/mtschirs/js-objectdetect)
